@@ -1,0 +1,15 @@
+%h1 Tags
+
+%table
+  %tr
+    %th Name
+    %th Category
+  - for tag in @tags
+    %tr
+      %td= h tag
+      %td= h tag.category
+      %td= link_to 'Show', admin_tag_path(tag)
+      %td= link_to 'Edit', edit_admin_tag_path(tag)
+      %td= link_to 'Destroy', admin_tag_path(tag), :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Tag", new_admin_tag_path

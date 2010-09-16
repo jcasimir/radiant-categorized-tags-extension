@@ -1,0 +1,15 @@
+- title "Tagging"
+
+%p
+  %strong Taggable:
+  =h @tagging.taggable_id
+%p
+  %strong Tag:
+  =h @tagging.tag_id
+
+%p
+  = link_to "Edit", edit_tagging_path(@tagging)
+  |
+  = link_to "Destroy", @tagging, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", taggings_path

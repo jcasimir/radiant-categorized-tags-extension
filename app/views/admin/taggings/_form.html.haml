@@ -1,0 +1,12 @@
+- form_for @tagging do |f|
+  = f.error_messages
+  %p
+    = f.label :taggable_id
+    %br
+    = f.text_field :taggable_id
+  %p
+    = f.label :tag_id
+    %br
+    = f.text_field :tag_id
+  %p
+    = f.submit

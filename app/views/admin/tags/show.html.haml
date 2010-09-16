@@ -1,0 +1,15 @@
+- title "Tag"
+
+%p
+  %strong Name:
+  =h @tag.name
+%p
+  %strong Category:
+  =h @tag.category_id
+
+%p
+  = link_to "Edit", edit_tag_path(@tag)
+  |
+  = link_to "Destroy", @tag, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", tags_path

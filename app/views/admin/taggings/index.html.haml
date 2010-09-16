@@ -1,0 +1,15 @@
+- title "Taggings"
+
+%table
+  %tr
+    %th Taggable
+    %th Tag
+  - for tagging in @taggings
+    %tr
+      %td= h tagging.taggable_id
+      %td= h tagging.tag_id
+      %td= link_to 'Show', tagging
+      %td= link_to 'Edit', edit_tagging_path(tagging)
+      %td= link_to 'Destroy', tagging, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Tagging", new_tagging_path
